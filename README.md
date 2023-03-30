@@ -1,7 +1,4 @@
-# Mini-projet-Docker
-
-
-En cours de rédaction
+# Mini-projet-Docker (Brouillon, en cours de rédaction).
 
 
 ![image](https://user-images.githubusercontent.com/72947514/228953442-8a6146be-1004-4ef4-8ec1-d3a6d6d769aa.png)
