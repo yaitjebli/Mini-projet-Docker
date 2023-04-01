@@ -1,0 +1,29 @@
+version: '2'
+services:
+  api:
+    image: yaitjebli/pozosapi:v3
+    container_name: apirequest
+    ports:
+      - "8500:5000"
+    volumes:  
+      - $PWD/simple_api/student_age.json:/data/student_age.json
+    networks:
+      - pozosnet    
+  
+  ihm:
+    depends_on:
+      - api
+    image: php:apache
+    environment:
+      - USERNAME=toto
+      - PASSWORD=python
+    volumes:
+      - ./website:/var/www/html
+    ports:
+      - "80:80"
+    networks:
+      - pozosnet
+
+networks:
+ pozosnet:
+
