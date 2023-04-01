@@ -7,7 +7,9 @@ services:
       - "8500:5000"
     volumes:  
       - $PWD/simple_api/student_age.json:/data/student_age.json
-
+    networks:
+      - pozosnet    
+  
   ihm:
     depends_on:
       - api
@@ -19,4 +21,9 @@ services:
       - ./website:/var/www/html
     ports:
       - "80:80"
+    networks:
+      - pozosnet
+
+networks:
+ pozosnet:
 
